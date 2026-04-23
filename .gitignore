@@ -1,0 +1,26 @@
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# Android Studio files
+.idea/
+*.iml
+*.iws
+*.ipr
+local.properties
+.DS_Store
+
+# User-specific / Local files
+captures/
+.externalNativeBuild/
+.cxx/
+output.json
+
+# Log files
+*.log
+
+# Project specific
+.gemini/
+bin/
+gen/

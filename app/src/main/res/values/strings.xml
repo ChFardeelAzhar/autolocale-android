@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AutoLocale</string>
+    <string name="al_hello_name">Hello $name!</string>
+    <string name="al_welcome_to_autolocale">Welcome to AutoLocale</string>
+    <string name="al_click_me">Click Me</string>
+    <string name="al_this_is_a_multiline_hardcoded_string">This is a multiline
+                hardcoded string.</string>
+    <string name="al_switch_language">Switch Language:</string>
+    <string name="al_english">English</string>
+    <string name="al_arabic">Arabic</string>
+    <string name="al_french">French</string>
+</resources>

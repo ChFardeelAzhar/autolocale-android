@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="al_hello_name">Hello $name!</string>
+    <string name="al_welcome_to_autolocale">أهلاً بك في AutoLocale</string>
+    <string name="al_click_me">إضغط هنا</string>
+    <string name="al_this_is_a_multiline_hardcoded_string">This is a multiline
+                hardcoded string.</string>
+    <string name="al_switch_language">Switch Language:</string>
+    <string name="al_english">English</string>
+    <string name="al_arabic">العربية</string>
+    <string name="al_french">Français</string>
+</resources>
