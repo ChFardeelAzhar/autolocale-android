@@ -20,9 +20,21 @@ abstract class ScanStringsTask : DefaultTask() {
 
         println("AutoLocale: Starting scan...")
         println("AutoLocale: Target languages → ${extension.languages}")
+        
+        val keyGenerator = KeyGenerator() // Per-session instance
+        
+        // Reflection se namespace nikaalo (taake AGP par direct dependency na ho)
+        val androidExtension = project.extensions.findByName("android")
+        val namespace = try {
+            androidExtension?.let {
+                it.javaClass.getMethod("getNamespace").invoke(it) as? String
+            }
+        } catch (e: Exception) {
+            null
+        } ?: ""
 
-        // Project ke andar saari .kt files dhundo
-        val kotlinFiles = project.fileTree(project.projectDir) {
+        // Sirf is module ke 'src/main' folder ke andar .kt files dhundo
+        val kotlinFiles = project.fileTree(project.file("src/main")) {
             it.include("**/*.kt")
             it.exclude("**/build/**")
         }
@@ -53,7 +65,7 @@ abstract class ScanStringsTask : DefaultTask() {
                     val offset = match.range.first
                     val lineNumber = content.substring(0, offset).count { it == '\n' } + 1
                     
-                    val key = KeyGenerator.generateKey(value)
+                    val key = keyGenerator.generateKey(value)
                     
                     foundStrings.add(
                         HardcodedString(
@@ -93,7 +105,7 @@ abstract class ScanStringsTask : DefaultTask() {
         if (foundStrings.isNotEmpty()) {
             val filesToTransform = foundStrings.groupBy { it.filePath }
             filesToTransform.forEach { (path, strings) ->
-                SourceTransformer.transformFile(File(path), strings, extension.dryRun)
+                SourceTransformer.transformFile(File(path), strings, extension.dryRun, namespace)
             }
         }
 

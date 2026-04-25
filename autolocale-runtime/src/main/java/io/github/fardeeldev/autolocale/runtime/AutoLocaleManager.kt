@@ -15,6 +15,9 @@ object AutoLocaleManager {
     fun setLanguage(context: Context, languageCode: String) {
         val appLocale: LocaleListCompat = LocaleListCompat.forLanguageTags(languageCode)
         AppCompatDelegate.setApplicationLocales(appLocale)
+        
+        // Compose state update karo taake foran UI refresh ho
+        AutoLocaleState.currentLocale.value = Locale(languageCode)
     }
 
     /**

@@ -1,5 +1,6 @@
 package io.github.fardeeldev.autolocale
 
+import android.annotation.SuppressLint
 import androidx.compose.ui.res.stringResource
  
 import android.os.Bundle
@@ -15,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import io.github.fardeeldev.autolocale.ui.theme.AutoLocaleTheme
 import io.github.fardeeldev.autolocale.runtime.AutoLocaleManager
+import io.github.fardeeldev.autolocale.runtime.AutoLocaleProvider
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -24,16 +26,16 @@ import androidx.compose.material3.Button
 import androidx.compose.ui.unit.dp
  
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            AutoLocaleTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+            AutoLocaleProvider {
+                AutoLocaleTheme {
+                    Scaffold(modifier = Modifier.fillMaxSize()) {
+                        TestScreen()
+                    }
                 }
             }
         }

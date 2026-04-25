@@ -9,4 +9,11 @@
     <string name="al_english">English</string>
     <string name="al_arabic">العربية</string>
     <string name="al_french">Français</string>
+    <string name="al_welcome_to_our_app">Welcome to our app</string>
+    <string name="al_please_login_to_continue">Please login to continue</string>
+    <string name="al_forgot_your_password">Forgot your password?</string>
+    <string name="al_don_t_have_an_account_sign_up">Don't have an account? Sign up</string>
+    <string name="al_settings">Settings</string>
+    <string name="al_dark_mode">Dark mode</string>
+    <string name="al_logout">Logout</string>
 </resources>
