@@ -10,6 +10,8 @@ build/
 *.ipr
 local.properties
 .DS_Store
+*.keystore
+groq_api_key
 
 # User-specific / Local files
 captures/

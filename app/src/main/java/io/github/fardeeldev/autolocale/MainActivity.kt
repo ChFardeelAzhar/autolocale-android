@@ -47,7 +47,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     val context = LocalContext.current
     
     androidx.compose.foundation.layout.Column(modifier = modifier.padding(16.dp)) {
-        Text(text = stringResource(R.string.al_hello_name))
         Text(stringResource(R.string.al_welcome_to_autolocale))
         Text(
             text = stringResource(R.string.al_this_is_a_multiline_hardcoded_string).trimIndent()
@@ -69,11 +68,21 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 Text(stringResource(R.string.al_french))
             }
         }
+        Text(stringResource(R.string.al_wellcome_to_our_app))
+        Text(stringResource(R.string.al_please_login_to_continue))
+        Text(stringResource(R.string.al_forget_your_password))
+        Text(stringResource(R.string.al_don_t_have_account_sign_up))
 
         Spacer(modifier = Modifier.height(24.dp))
 
         androidx.compose.material3.Button(onClick = {}) {
-            Text(stringResource(R.string.al_click_me))
+            Text(stringResource(R.string.al_settings))
+        }
+        androidx.compose.material3.Button(onClick = {}) {
+            Text(stringResource(R.string.al_dark_mode))
+        }
+        androidx.compose.material3.Button(onClick = {}) {
+            Text(stringResource(R.string.al_logout))
         }
     }
 }

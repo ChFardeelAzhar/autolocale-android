@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">AutoLocale</string>
-    <string name="al_hello_name">Hello $name!</string>
     <string name="al_welcome_to_autolocale">Welcome to AutoLocale</string>
     <string name="al_click_me">Click Me</string>
     <string name="al_this_is_a_multiline_hardcoded_string">This is a multiline
@@ -12,8 +11,16 @@
     <string name="al_welcome_to_our_app">Welcome to our app</string>
     <string name="al_please_login_to_continue">Please login to continue</string>
     <string name="al_forgot_your_password">Forgot your password?</string>
-    <string name="al_don_t_have_an_account_sign_up">Don't have an account? Sign up</string>
     <string name="al_settings">Settings</string>
     <string name="al_dark_mode">Dark mode</string>
     <string name="al_logout">Logout</string>
+    <string name="al_wellcome_to_our_app">wellcome to our app</string>
+    <string name="al_forget_your_password">forget your password ?</string>
+    <string name="al_don_t_have_account_sign_up">don\'t have account sign up?</string>
+    <string name="al_fardeel_azhar">Fardeel Azhar</string>
+    <string name="al_kotlin_developer">Kotlin Developer</string>
+    <string name="al_compose_developer">Compose Developer</string>
+    <string name="al_software_engineer">Software Engineer</string>
+    <string name="al_android_engineer">Android Engineer</string>
+    <string name="al_auto_locale_second_library_for_native_android">Auto Locale Second Library For native android</string>
 </resources>

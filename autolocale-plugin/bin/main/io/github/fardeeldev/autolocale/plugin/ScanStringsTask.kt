@@ -92,11 +92,11 @@ abstract class ScanStringsTask : DefaultTask() {
             
             foundStrings.forEach { item ->
                 // Default language (English)
-                XmlManager.updateStringsXml(resDir, null, item.key, item.value)
+                XmlManager.updateStringsXml(resDir, null, item.key, item.value, extension.groqApiKey)
                 
                 // Target languages
                 extension.languages.forEach { lang ->
-                    XmlManager.updateStringsXml(resDir, lang, item.key, item.value)
+                    XmlManager.updateStringsXml(resDir, lang, item.key, item.value, extension.groqApiKey)
                 }
             }
         }

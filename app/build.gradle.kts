@@ -7,8 +7,10 @@ plugins {
 
 autoLocale {
     enabled = true
-    dryRun = false
+    dryRun = true
     languages = listOf("ar", "fr", "ur")
+    // add you api key here
+    //  groqApiKey = "fdsalfjadsfjasdlkfjadjslfjadsklfjasl"
 }
 
 android {

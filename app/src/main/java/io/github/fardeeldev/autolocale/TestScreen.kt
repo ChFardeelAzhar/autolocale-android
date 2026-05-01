@@ -12,12 +12,11 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun TestScreen() {
     Column(modifier = Modifier.padding(16.dp)) {
-        Text(stringResource(R.string.al_welcome_to_our_app))
-        Text(stringResource(R.string.al_please_login_to_continue))
-        Text(stringResource(R.string.al_forgot_your_password))
-        Text(stringResource(R.string.al_don_t_have_an_account_sign_up))
-        Text(text = stringResource(R.string.al_settings))
-        Text(text = stringResource(R.string.al_dark_mode))
-        Text(text = stringResource(R.string.al_logout))
+        Text("Fardeel Azhar")
+        Text("Kotlin Developer")
+        Text("Compose Developer")
+        Text("Software Engineer")
+        Text("Android Engineer")
+        Text("Auto Locale Second Library For native android")
     }
 }

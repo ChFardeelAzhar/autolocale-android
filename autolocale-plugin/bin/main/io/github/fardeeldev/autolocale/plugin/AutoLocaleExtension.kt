@@ -16,4 +16,7 @@ open class AutoLocaleExtension {
 
     // Dry run mode (sirf dikhayega, files modify nahi karega)
     var dryRun: Boolean = true
+
+    // Groq AI API Key for better translations
+    var groqApiKey: String? = null
 }
